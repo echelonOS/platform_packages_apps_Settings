@@ -31,16 +31,16 @@ import com.android.settings.overlay.FeatureFactory;
 import com.android.settings.security.trustagent.TrustAgentManager;
 import com.android.settingslib.core.AbstractPreferenceController;
 
-public class QuickUnlockPreferenceController extends AbstractPreferenceController
+public class ScramblePinPreferenceController extends AbstractPreferenceController
         implements PreferenceControllerMixin, Preference.OnPreferenceChangeListener {
 
-    private static final String KEY_LOCKSCREEN_QUICK_UNLOCK_CONTROL = "lockscreen_quick_unlock_control";
+    private static final String KEY_LOCKSCREEN_SCRAMBLE_PIN_LAYOUT = "lockscreen_scramble_pin_layout";
 
     private final int mUserId;
     private final LockPatternUtils mLockPatternUtils;
     private final TrustAgentManager mTrustAgentManager;
 
-    public QuickUnlockPreferenceController(Context context, int userId,
+    public ScramblePinPreferenceController(Context context, int userId,
             LockPatternUtils lockPatternUtils) {
         super(context);
         mUserId = userId;
@@ -57,8 +57,6 @@ public class QuickUnlockPreferenceController extends AbstractPreferenceControlle
         switch (mLockPatternUtils.getKeyguardStoredPasswordQuality(mUserId)) {
             case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC:
             case DevicePolicyManager.PASSWORD_QUALITY_NUMERIC_COMPLEX:
-            case DevicePolicyManager.PASSWORD_QUALITY_ALPHABETIC:
-            case DevicePolicyManager.PASSWORD_QUALITY_COMPLEX:
                 return true;
             default:
                 return false;
@@ -68,7 +66,7 @@ public class QuickUnlockPreferenceController extends AbstractPreferenceControlle
     @Override
     public void updateState(Preference preference) {
         int value = Settings.System.getInt(
-                mContext.getContentResolver(), Settings.System.ECHELON_LOCKSCREEN_QUICK_UNLOCK_CONTROL, 0);
+                mContext.getContentResolver(), Settings.System.ECHELON_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT, 0);
         ((SwitchPreference) preference).setChecked(value != 0);
     }
 
@@ -76,12 +74,12 @@ public class QuickUnlockPreferenceController extends AbstractPreferenceControlle
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         boolean value = (Boolean) newValue;
         Settings.System.putInt(
-                mContext.getContentResolver(), Settings.System.ECHELON_LOCKSCREEN_QUICK_UNLOCK_CONTROL, value ? 1 : 0);
+                mContext.getContentResolver(), Settings.System.ECHELON_LOCKSCREEN_PIN_SCRAMBLE_LAYOUT, value ? 1 : 0);
         return true;
     }
 
     @Override
     public String getPreferenceKey() {
-        return KEY_LOCKSCREEN_QUICK_UNLOCK_CONTROL;
+        return KEY_LOCKSCREEN_SCRAMBLE_PIN_LAYOUT;
     }
 }
