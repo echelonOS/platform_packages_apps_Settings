@@ -33,4 +33,6 @@
     <string name="mod_version">echelonOS version</string>
     <string name="mod_version_default">Unknown</string>
 
+    <string name="screenshot_shutter_sound_title">Screenshot sound</string>
+
 </resources>
