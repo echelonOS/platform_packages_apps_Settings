@@ -37,6 +37,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+        <!-- echelon version -->
+        <TextView
+            style="@style/device_info_dialog_label"
+            android:id="@+id/echelon_version_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/echelon_version"/>
+        <TextView
+            style="@style/device_info_dialog_value"
+            android:id="@+id/echelon_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
         <TextView
             style="@style/device_info_dialog_label"
             android:id="@+id/security_patch_level_label"
