@@ -484,7 +484,7 @@ public class SimSettings extends RestrictedSettingsFragment implements Indexable
                    !mContext.getResources().getBoolean(R.bool.config_enableManualSubProvisioning)) {
                 mSwitch.setVisibility(View.GONE);
             } else {
-                mSwitch.setEnabled(!isAirplaneModeOn() || isValid());
+                mSwitch.setEnabled(!isAirplaneModeOn() && isValid());
                 setChecked(getProvisionStatus(mSlotId) == PROVISIONED);
             }
         }
