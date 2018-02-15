@@ -52,6 +52,7 @@
     <string name="ok_string">Ok</string>
 
     <!-- Themes -->
+    <string name="theme_category_title">System Theme</string>
     <string name="system_theme_style_title">UI style</string>
     <string name="system_theme_style_auto">Wallpaper based</string>
     <string name="system_theme_style_light">Light UI</string>
