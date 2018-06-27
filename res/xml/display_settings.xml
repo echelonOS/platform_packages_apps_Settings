@@ -163,6 +163,12 @@
             android:icon="@drawable/ic_accent_picker"
             android:title="@string/theme_accent_picker_title" />
 
+    <org.echelon.echelontweaks.preferences.SystemSettingSwitchPreference
+        android:key="force_allow_system_themes"
+        android:title="@string/force_allow_system_themes_title"
+        android:summary="@string/force_allow_system_themes_summary"
+        android:defaultValue="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>
