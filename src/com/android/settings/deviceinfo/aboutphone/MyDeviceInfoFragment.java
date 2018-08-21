@@ -23,6 +23,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.UserInfo;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.os.UserManager;
 import android.provider.SearchIndexableResource;
 import android.view.View;
@@ -65,6 +66,8 @@ public class MyDeviceInfoFragment extends DashboardFragment
 
     private static final String KEY_MY_DEVICE_INFO_HEADER = "my_device_info_header";
     private static final String KEY_LEGAL_CONTAINER = "legal_container";
+    private static final String KEY_ECHELON_INFO_HEADER = "echelon_mod_header";
+    private static final String PROPERTY_ECHELON_VERSION = "ro.echelon.version";
 
     @Override
     public int getMetricsCategory() {
@@ -80,6 +83,7 @@ public class MyDeviceInfoFragment extends DashboardFragment
     public void onResume() {
         super.onResume();
         initHeader();
+        initEchelonHeader();
     }
 
     @Override
@@ -165,6 +169,24 @@ public class MyDeviceInfoFragment extends DashboardFragment
             controller.setIcon(
                     com.android.settingslib.Utils.getUserIcon(getActivity(), userManager, info));
         }
+
+        controller.done(context, true /* rebindActions */);
+    }
+
+    private void initEchelonHeader() {
+        final LayoutPreference headerPreference =
+                (LayoutPreference) getPreferenceScreen().findPreference(KEY_ECHELON_INFO_HEADER);
+        final View appSnippet = headerPreference.findViewById(R.id.entity_header);
+        final Activity context = getActivity();
+        final Bundle bundle = getArguments();
+        EntityHeaderController controller = EntityHeaderController
+                .newInstance(context, this, appSnippet)
+                .setRecyclerView(getListView(), getLifecycle())
+                .setButtonActions(EntityHeaderController.ActionType.ACTION_NONE,
+                        EntityHeaderController.ActionType.ACTION_NONE);
+
+        controller.setLabel(getResources().getString(R.string.mod_version));
+        controller.setSummary(SystemProperties.get(PROPERTY_ECHELON_VERSION));
 
         controller.done(context, true /* rebindActions */);
     }
