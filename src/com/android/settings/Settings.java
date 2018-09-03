@@ -168,5 +168,5 @@ public class Settings extends SettingsActivity {
 
     // echelon additions start
     public static class EchelonDashboardActivity extends SettingsActivity {}
-
+    public static class OmniJawsSettingsActivity extends SettingsActivity { /* empty */ }
 }
