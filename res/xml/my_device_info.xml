@@ -63,17 +63,17 @@
         android:summary="@string/summary_placeholder"/>
 
     <!-- Legal information -->
-    <Preference
+    <!--<Preference
         android:key="legal_container"
         android:order="6"
         android:title="@string/legal_information"
         android:fragment="com.android.settings.LegalSettings"
-        settings:allowDividerAbove="true"/>
+        settings:allowDividerAbove="true"/>-->
 
     <!-- Regulatory labels -->
     <Preference
         android:key="regulatory_info"
-        android:order="7"
+        android:order="6"
         android:title="@string/regulatory_labels">
         <intent android:action="android.settings.SHOW_REGULATORY_INFO"/>
     </Preference>
@@ -89,7 +89,7 @@
     <!-- SIM status -->
     <Preference
         android:key="sim_status"
-        android:order="8"
+        android:order="7"
         android:title="@string/sim_status_title"
         settings:keywords="@string/keywords_sim_status"
         android:summary="@string/summary_placeholder"
