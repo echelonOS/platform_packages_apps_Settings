@@ -3347,5 +3347,21 @@
                  android:permission="android.permission.BIND_JOB_SERVICE" />
 
         <!-- This is the longest AndroidManifest.xml ever. -->
+
+        <activity android:name=".Settings$EchelonDashboardActivity"
+                  android:label="@string/header_category_echelon"
+                  android:icon="@drawable/ic_homepage_echelontweaks"
+                  android:taskAffinity="com.android.settings"
+                  android:parentActivityName="Settings">
+            <intent-filter android:priority="12">
+                <action android:name="com.android.settings.action.SETTINGS"/>
+            </intent-filter>
+            <meta-data android:name="com.android.settings.category"
+                       android:value="com.android.settings.category.ia.homepage"/>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="org.echelon.echelontweaks.EchelonFragment"/>
+            <meta-data android:name="com.android.settings.summary"
+                       android:resource="@string/echelon_dashboard_summary"/>
+        </activity>
     </application>
 </manifest>
