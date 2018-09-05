@@ -166,6 +166,7 @@ public class Settings extends SettingsActivity {
     public static class AccountDashboardActivity extends SettingsActivity {}
     public static class SystemDashboardActivity extends SettingsActivity {}
 
-    public static class EchelonDashboardActivity extends SettingsActivity { /* empty */ }
+    // echelon additions start
+    public static class EchelonDashboardActivity extends SettingsActivity {}
 
 }

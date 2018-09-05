@@ -3348,6 +3348,7 @@
 
         <!-- This is the longest AndroidManifest.xml ever. -->
 
+        <!-- echelon additions start -->
         <activity android:name=".Settings$EchelonDashboardActivity"
                   android:label="@string/header_category_echelon"
                   android:icon="@drawable/ic_homepage_echelontweaks"

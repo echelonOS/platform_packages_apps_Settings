@@ -139,6 +139,7 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import org.echelon.echelontweaks.EchelonFragment;
+import org.echelon.echelontweaks.ButtonSettings;
 
 public class SettingsGateway {
 
@@ -265,7 +266,10 @@ public class SettingsGateway {
             DirectoryAccessDetails.class.getName(),
             ToggleBackupSettingFragment.class.getName(),
             PreviouslyConnectedDeviceDashboardFragment.class.getName(),
+
+            // echelon additions start
             EchelonFragment.class.getName(),
+            ButtonSettings.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -304,6 +308,8 @@ public class SettingsGateway {
             Settings.DeviceInfoSettingsActivity.class.getName(),
             Settings.EnterprisePrivacySettingsActivity.class.getName(),
             Settings.MyDeviceInfoActivity.class.getName(),
+
+            // Home page > Echelon
             Settings.EchelonDashboardActivity.class.getName(),
     };
 }
