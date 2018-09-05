@@ -48,6 +48,7 @@ import android.widget.Toast;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 import com.android.settings.core.SubSettingLauncher;
 import com.android.settings.core.instrumentation.InstrumentedDialogFragment;
 import com.android.settings.dashboard.SummaryLoader;
@@ -558,12 +559,11 @@ public class StorageSettings extends SettingsPreferenceFragment implements Index
 
         private void updateSummary() {
             // TODO: Register listener.
-            final NumberFormat percentageFormat = NumberFormat.getPercentInstance();
             final PrivateStorageInfo info = PrivateStorageInfo.getPrivateStorageInfo(
                     mStorageManagerVolumeProvider);
             double privateUsedBytes = info.totalBytes - info.freeBytes;
             mLoader.setSummary(this, mContext.getString(R.string.storage_summary,
-                    percentageFormat.format(privateUsedBytes / info.totalBytes),
+                    Utils.formatPercentage(privateUsedBytes / info.totalBytes),
                     Formatter.formatFileSize(mContext, info.freeBytes)));
         }
     }
