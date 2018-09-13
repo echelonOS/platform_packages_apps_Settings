@@ -140,6 +140,8 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import org.echelon.echelontweaks.EchelonFragment;
 import org.echelon.echelontweaks.ButtonSettings;
+import org.echelon.echelontweaks.ButtonBrightnessSettings;
+import org.echelon.echelontweaks.interfacesettings.LockscreenSettings;
 
 public class SettingsGateway {
 
@@ -270,6 +272,8 @@ public class SettingsGateway {
             // echelon additions start
             EchelonFragment.class.getName(),
             ButtonSettings.class.getName(),
+            ButtonBrightnessSettings.class.getName(),
+            LockscreenSettings.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
