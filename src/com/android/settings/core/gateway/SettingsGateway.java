@@ -145,6 +145,7 @@ import org.echelon.echelontweaks.interfacesettings.LockscreenSettings;
 import org.echelon.echelontweaks.interfacesettings.BarsSettings;
 import org.echelon.echelontweaks.batterylight.BatteryLightSettings;
 import org.echelon.echelontweaks.moresettings.OmniJawsSettings;
+import org.echelon.echelontweaks.GestureSettings;
 
 
 public class SettingsGateway {
@@ -281,6 +282,7 @@ public class SettingsGateway {
             BarsSettings.class.getName(),
             BatteryLightSettings.class.getName(),
             OmniJawsSettings.class.getName(),
+            GestureSettings.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
