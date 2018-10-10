@@ -35,9 +35,6 @@
 
     <string name="screenshot_shutter_sound_title">Screenshot sound</string>
 
-    <string name="battery_image">Battery image</string>
-    <string name="battery_image_description">Show battery image in status bar</string>
-
     <string name="select_sim_for_sms">Select a SIM for SMS</string>
 
     <!-- Unlock lock screens -->
