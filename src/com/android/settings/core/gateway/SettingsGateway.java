@@ -141,6 +141,7 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 import org.echelon.echelontweaks.EchelonFragment;
 import org.echelon.echelontweaks.ButtonSettings;
 import org.echelon.echelontweaks.ButtonBrightnessSettings;
+import org.echelon.echelontweaks.ButtonCustomizationSettings;
 import org.echelon.echelontweaks.interfacesettings.LockscreenSettings;
 import org.echelon.echelontweaks.interfacesettings.BarsSettings;
 import org.echelon.echelontweaks.interfacesettings.StatusbarBatterySettings;
@@ -279,6 +280,7 @@ public class SettingsGateway {
             EchelonFragment.class.getName(),
             ButtonSettings.class.getName(),
             ButtonBrightnessSettings.class.getName(),
+            ButtonCustomizationSettings.class.getName(),
             LockscreenSettings.class.getName(),
             BarsSettings.class.getName(),
             StatusbarBatterySettings.class.getName(),
