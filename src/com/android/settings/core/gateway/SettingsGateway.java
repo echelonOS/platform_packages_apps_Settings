@@ -145,6 +145,7 @@ import org.echelon.echelontweaks.ButtonCustomizationSettings;
 import org.echelon.echelontweaks.interfacesettings.LockscreenSettings;
 import org.echelon.echelontweaks.interfacesettings.BarsSettings;
 import org.echelon.echelontweaks.interfacesettings.StatusbarBatterySettings;
+import org.echelon.echelontweaks.interfacesettings.StatusbarClockSettings;
 import org.echelon.echelontweaks.batterylight.BatteryLightSettings;
 import org.echelon.echelontweaks.moresettings.OmniJawsSettings;
 import org.echelon.echelontweaks.GestureSettings;
@@ -281,6 +282,7 @@ public class SettingsGateway {
             ButtonSettings.class.getName(),
             ButtonBrightnessSettings.class.getName(),
             ButtonCustomizationSettings.class.getName(),
+            StatusbarClockSettings.class.getName(),
             LockscreenSettings.class.getName(),
             BarsSettings.class.getName(),
             StatusbarBatterySettings.class.getName(),
