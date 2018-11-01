@@ -138,12 +138,14 @@ import com.android.settings.wifi.calling.WifiCallingSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
+<<<<<<< HEAD
 import org.echelon.echelontweaks.EchelonFragment;
 import org.echelon.echelontweaks.ButtonSettings;
 import org.echelon.echelontweaks.ButtonBrightnessSettings;
 import org.echelon.echelontweaks.ButtonCustomizationSettings;
 import org.echelon.echelontweaks.interfacesettings.LockscreenSettings;
 import org.echelon.echelontweaks.interfacesettings.BarsSettings;
+import org.echelon.echelontweaks.interfacesettings.NetworkTrafficSettings;
 import org.echelon.echelontweaks.interfacesettings.StatusbarBatterySettings;
 import org.echelon.echelontweaks.interfacesettings.StatusbarClockSettings;
 import org.echelon.echelontweaks.batterylight.BatteryLightSettings;
@@ -282,6 +284,7 @@ public class SettingsGateway {
             ButtonSettings.class.getName(),
             ButtonBrightnessSettings.class.getName(),
             ButtonCustomizationSettings.class.getName(),
+            NetworkTrafficSettings.class.getName(),
             StatusbarClockSettings.class.getName(),
             LockscreenSettings.class.getName(),
             BarsSettings.class.getName(),
